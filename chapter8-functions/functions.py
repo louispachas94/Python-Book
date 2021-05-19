@@ -128,4 +128,4 @@ print_model(unprinted_desings, printed_designs)
     # call show_completed function with arguments
 show_completed(printed_designs)
 
-
+print('hello world')
