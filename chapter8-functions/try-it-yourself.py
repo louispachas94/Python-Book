@@ -85,3 +85,14 @@ while True:
     print(make_albumv1(users_input_artist, users_input_album))
     
 print(make_album('50 cent','the massacre', 20))
+
+# 8.9
+print('\n')
+def show_messages(list_message):
+    for msg in list_message:
+        print(msg)
+
+today = ['Breakfast today is a sandwich', 
+'this morning it is chilly',
+'my hamstring feels a lilttle better']
+show_messages(today)
