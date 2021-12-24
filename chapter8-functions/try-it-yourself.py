@@ -88,11 +88,39 @@ print(make_album('50 cent','the massacre', 20))
 
 # 8.9
 print('\n')
-def show_messages(list_message):
-    for msg in list_message:
-        print(msg)
 
-today = ['Breakfast today is a sandwich', 
-'this morning it is chilly',
-'my hamstring feels a lilttle better']
-show_messages(today)
+message_list = ['shakes for dinner', 'seafood for lunch', 'subway for breakfast']
+
+# create function, parameter
+def show_message(texts_list):
+# for loop with functions parameter
+    for text in texts_list:
+# for loop will print 
+        print(text)
+# call function with created list as the parameter
+show_message(message_list)
+
+# 8.10, cont. from 8.9
+print('\n')
+new_message_list=[]
+# create a function with 2 parameters - current list & new empty list
+def send_messages(texts_list, sent_texts):
+# while loop for current list
+    while texts_list:
+        print(texts_list)
+# create a new variable define removing last item in the current list
+        current_list = message_list.pop()
+# with 2nd parameter append newly popped item from current list to new list
+# using 2nd parameter since it is tied to the 2nd/new list. needs to be seprate and have own parameter
+        sent_texts.append(current_list)
+# call function, using both lists as the parameter
+send_messages(message_list, new_message_list)
+# print to verify list populated and current one is empty
+print(new_message_list, message_list)
+
+# 8.11, cont. from 8.10
+print('\n')
+# call the fucntion from 8.10 but with the parameter/copied current list. [:] means copy list, in this case would be the original list
+send_messages(message_list[:], new_message_list)
+# verify the list have changed
+print(message_list, new_message_list)
